@@ -1,0 +1,19 @@
+
+.person{
+    background-color: lightgreen;
+    color:lightcoral;
+}
+.content{
+    margin: 0 auto;
+
+}
+.button{ 
+    background-color:lightblue;
+}
+
+@media(min-width:500px){
+    .person{
+        background-color: lightcoral;
+        color:white;
+    }
+}
