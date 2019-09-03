@@ -5,11 +5,11 @@ const burgerIngredient = (props) => {
     let ingredient = null;
     switch (props.type) {
         case 'bread-bottom':
-            ingredient = <div className={styleClasses.breadBottom}>Bread bottom</div>;
+            ingredient = <div className={styleClasses.breadBottom}></div>;
             break;
         case 'bread-top':
             ingredient = (
-                <div className={styleClasses.breadTop}>
+                <div className={styleClasses.breadTop}> 
                     <div className={styleClasses.seeds1}></div>
                     <div className={styleClasses.seeds2}></div>
                 </div>
@@ -27,6 +27,8 @@ const burgerIngredient = (props) => {
         case "salad":
             ingredient = <div className={styleClasses.salad}></div>;
             break;
+
+        default: ingredient = null;
     }
     return ingredient;
 }
