@@ -53,6 +53,12 @@ class BurgerBuilder extends React.Component {
     onClose = () => {
         this.setState({ showModal: false })
     }
+    perchaseCanceled = ()=>{
+
+    }
+    perchaseCheckedout = ()=>{
+        
+    }
     render() {
         let disabledInfo = Object.keys(this.state.ingredients).reduce((acc, cur) => {
             acc[cur] = this.state.ingredients[cur] === 0
@@ -71,7 +77,10 @@ class BurgerBuilder extends React.Component {
                     order={this.order}
                 />
                 {this.state.showModal && <Modal onClose={this.onClose}>
-                    <OrderSummary ingredients={this.state.ingredients}></OrderSummary>
+                    <OrderSummary ingredients={this.state.ingredients}
+                        perchaseCanceled={this.perchaseCanceled}
+                        perchaseCheckedout={this.perchaseCheckedout}
+                    ></OrderSummary>
                 </Modal>}
             </React.Fragment>
         )
