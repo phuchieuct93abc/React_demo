@@ -8,7 +8,7 @@ const toolbar = props => (
         <span>
             <img className={classes.logo} src={logo} />
         </span>
-        <nav>
+        <nav style={{height:'100%'}}>
             <NavigationItems />
         </nav>
     </header>

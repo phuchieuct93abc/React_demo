@@ -1,0 +1,16 @@
+.navigationItem{
+    padding: 0 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 5px solid transparent;
+
+}
+.navigationItem a{
+    color:white;
+}
+.active{
+    border-bottom: 5px solid lightskyblue;
+    box-sizing: border-box;
+}

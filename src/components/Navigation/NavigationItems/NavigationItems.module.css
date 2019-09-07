@@ -1,0 +1,9 @@
+.navigationItems{
+    list-style: none;
+    display: flex;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+}
