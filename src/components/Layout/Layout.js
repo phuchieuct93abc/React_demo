@@ -7,4 +7,4 @@ const layout = (props) => (
         <main className={styleClasses.content}>{props.children}</main>
     </React.Fragment>
 )
-export default layout;
+export default layout; 

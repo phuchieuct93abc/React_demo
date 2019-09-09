@@ -1,6 +1,8 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import classes from './OrderSummary.module.css'
+import { connect } from 'react-redux';
+import { ADD_INGREDIENT, LESS_INGREDIENT } from '../../../store/action';
 const orderSummary = props => (
     <div className={classes.orderSummary}>
         <h3>Your order</h3>
@@ -23,4 +25,17 @@ const orderSummary = props => (
 
     </div>
 );
-export default orderSummary;
+let mapStateToProps=(state)=>{
+    return {
+        ingredients:state.ingredients,
+        price:state.price
+    }
+}
+let mapDispatchToProps = dispatch=>{
+    return {
+        addMore:(ingredient)=>{dispatch({type:ADD_INGREDIENT,val:ingredient})},
+        less:(ingredient)=>{dispatch({type:LESS_INGREDIENT,val:ingredient})}
+    }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(orderSummary);
